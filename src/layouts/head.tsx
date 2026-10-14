@@ -40,6 +40,13 @@ export const Head = ({ seo }: HeadProps) => {
 			{resolvedSeo.absoluteImage ? (
 				<meta property="og:image" content={resolvedSeo.absoluteImage} />
 			) : null}
+			{resolvedSeo.absoluteImage?.includes("/og/") ? (
+				<>
+					<meta property="og:image:width" content="1200" />
+					<meta property="og:image:height" content="630" />
+					<meta property="og:image:type" content="image/png" />
+				</>
+			) : null}
 			{resolvedSeo.imageAlt ? (
 				<meta property="og:image:alt" content={resolvedSeo.imageAlt} />
 			) : null}

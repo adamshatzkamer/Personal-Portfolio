@@ -67,7 +67,7 @@ export default function IndexPage({
 				fullTitle: `${siteConfig.name} | ${siteConfig.title}`,
 				description: pageDescription,
 				pathname: "/",
-				image: getSeoImage(hero.image, getGeneratedPageOgImage("home")),
+				image: getSeoImage(getGeneratedPageOgImage("home"), hero.image),
 				imageAlt: `${siteConfig.name} home page`,
 				structuredData: [
 					getWebsiteStructuredData(),
